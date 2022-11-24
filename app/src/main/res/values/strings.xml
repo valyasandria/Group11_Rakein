@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">"Rake.in"</string>
+    <string name="rake_in">Rake.in</string>
+    <string name="log_in">Log In</string>
+    <string name="please_type">Please type your information</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="new_user_cr">New user? Create an Account</string>
+    <string name="log_in2">Log In</string>
+    <string name="register">Create Account</string>
+    <string name="create_acc">Create An Account</string>
+    <string name="username">Username</string>
+    <string name="full_name">Full Name</string>
+    <string name="register_store">Register Store</string>
+    <string name="store_name">Store Name</string>
+    <string name="store_address">Store Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="store_category">Store Category</string>
+    <string name="store_description">Store Description</string>
+    <string name="product_name">Product Name</string>
+    <string name="add_product">Add Product</string>
+    <string name="product_price_idr">Product Price (IDR)</string>
+    <string name="stocks">Stocks</string>
+    <string name="quantity">Quantity</string>
+</resources>
