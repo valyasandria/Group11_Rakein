@@ -7,36 +7,17 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
+        android:layout_marginStart="100dp"
         android:layout_marginBottom="25dp"
         android:text="@string/rp"
         android:textColor="@color/black"
         android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintStart_toEndOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/please_type2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="50dp"
-        android:gravity="top"
-        android:lineSpacingExtra="19sp"
-        android:text="@string/please_check_your_order"
-        android:textAppearance="@style/please_type"
-        android:textColor="#757575"
-        android:translationY="-9.49sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rake_in2" />
 
     <Button
         android:id="@+id/button3"
@@ -44,7 +25,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="100dp"
         android:backgroundTint="#EB6440"
         android:text="@string/generate_receipt"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,7 +41,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="40dp"
         android:gravity="top"
         android:lineSpacingExtra="-37sp"
@@ -73,18 +54,17 @@
 
     <ListView
         android:layout_width="409dp"
-        android:background="#E1E0E0"
-        android:radius="15dp"
-        android:divider="@color/black"
         android:layout_height="327dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="1dp"
+        android:background="#E1E0E0"
+        android:divider="@color/black"
+        android:radius="15dp"
         android:scrollbarStyle="outsideOverlay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/please_type2"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/rake_in2" />
 
     <TextView
         android:id="@+id/textView4"

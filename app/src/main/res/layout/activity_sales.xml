@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="40dp"
         android:gravity="top"
         android:lineSpacingExtra="-37sp"
@@ -27,11 +27,11 @@
         android:layout_width="409dp"
         android:layout_height="350dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="1dp"
         android:background="#E1E0E0"
-        android:radius="15dp"
         android:divider="@color/black"
+        android:radius="15dp"
         android:scrollbarStyle="outsideOverlay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -40,13 +40,14 @@
 
     <RelativeLayout
         android:layout_width="350dp"
-        android:layout_height="80dp"
-        android:background="#FF5722"
+        android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="100dp"
+        android:background="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent">
 
 
@@ -72,4 +73,18 @@
             android:textSize="26sp"
             android:textStyle="bold" />
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="@string/home"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

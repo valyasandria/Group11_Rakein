@@ -8,18 +8,18 @@
 
     <TextView
         android:id="@+id/rake_in"
-        android:textStyle="bold"
         android:layout_width="192dp"
         android:layout_height="0dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="40dp"
         android:gravity="top"
         android:lineSpacingExtra="-37sp"
         android:text="@string/rake_in"
         android:textAppearance="@style/rake_in"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -95,12 +95,12 @@
 
     <Button
         android:id="@+id/button"
-        android:backgroundTint="#EB6440"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
+        android:backgroundTint="#EB6440"
         android:text="@string/log_in2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,6 +108,7 @@
 
     <TextView
         android:id="@+id/new_user_cr"
+        android:textColor="#0323F4"
         android:layout_width="wrap_content"
         android:layout_height="14dp"
         android:layout_alignParentStart="true"
