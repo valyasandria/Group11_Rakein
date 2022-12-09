@@ -1,24 +1,93 @@
 package com.example.rakein.model;
 
-public class User extends Serializable{
-    public String name;
-    public String username;
-    public String email;
-    public String password;
+import com.google.gson.annotations.SerializedName;
 
-    /** Creates an account with the specified information.
-     * @param name The account's name.
-     * @param email The account's email address.
-     * @param password The account's password.
-     * @param id The account id
+/**
+ * Class that represents a user.
+ *
+ * @author Dhau' Embun Azzahra
+ */
+public class User {
+    /**
+     * The user id.
      */
-    public User(int id, String name, String username, String email, String password){
-        this.id = id;
+    @SerializedName("user_id")
+    private int user_id;
+
+    /**
+     * The user id.
+     */
+    @SerializedName("name")
+    private String name;
+    /**
+     * The user's username.
+     */
+    @SerializedName("username")
+    private String username;
+    /**
+     * The user's email.
+     */
+    @SerializedName("email")
+    private String email;
+    /**
+     * The user's password.
+     */
+    @SerializedName("password")
+    private String password;
+
+    public User(int user_id, String name, String username, String email, String password){
+        this.user_id = user_id;
         this.name = name;
         this.username = username;
         this.email = email;
         this.password = password;
     }
 
-}
+    public User(String name, String username, String email, String password) {
+        this.name = name;
+        this.name = username;
+        this.name = email;
+        this.name = password;
 
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}
