@@ -2,6 +2,7 @@ package com.example.rakein.service;
 
 import com.example.rakein.model.DefaultResponse;
 import com.example.rakein.model.GetUserResponse;
+import com.example.rakein.model.Store;
 import com.example.rakein.model.User;
 
 import java.util.HashMap;
@@ -28,6 +29,9 @@ public interface service {
 
     @POST("/register")
     Call<DefaultResponse> register(@Body User user);
+
+    @POST("/registerStore")
+    Call<DefaultResponse> register(@Body Store store);
 
 
 }

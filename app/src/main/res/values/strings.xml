@@ -52,4 +52,7 @@
     <string name="product_description">Product Description</string>
     <string name="add_to_chart">Add to chart</string>
     <string name="_0">0</string>
+    <string name="profit">Profit</string>
+    <string name="add_to_cart">ADD TO CART</string>
+    <string name="qty">qty</string>
 </resources>

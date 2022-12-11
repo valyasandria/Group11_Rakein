@@ -5,10 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import org.intellij.lang.annotations.JdkConstants;
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 public class CatalogueActivity extends AppCompatActivity {
 
@@ -20,15 +26,36 @@ public class CatalogueActivity extends AppCompatActivity {
         Button addProduct = findViewById(R.id.button6);
         Button checkout = findViewById(R.id.button8);
         ListView listview = findViewById(R.id.listview1);
-        TextView quantity = findViewById(R.id.textView2);
-        TextView harga = findViewById(R.id.textView);
-        String[] product = {"Pensil 2B", "Penghapus", "Penggaris 20 cm", "Buku Gambar A4"};
-        String[] stock = {"20", "30", "15", "24"};
-        String[] price = {"2000", "1500", "5000", "12000"};
+        TextView items = findViewById(R.id.textView27);
+        final ArrayList<MyData> arrayList = new ArrayList<>();
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_listview, R.id.textView3, product);
-        listview.setAdapter(arrayAdapter);
+        arrayList.add(new MyData("Buku Tulis", "12", "Rp12.000"));
+        arrayList.add(new MyData("Pulpen Joyko", "15", "Rp5.000"));
+        arrayList.add(new MyData("Penggaris", "5", "Rp5.000"));
+        arrayList.add(new MyData("Penghapus", "23", "Rp2.000"));
+        arrayList.add(new MyData("Stabilo", "11", "Rp9.000"));
+        arrayList.add(new MyData("Spidol Permanen", "9", "Rp12.000"));
+        ProductAdapter productAdapter = new ProductAdapter(this, arrayList);
 
+        // create the instance of the ListView to set the numbersViewAdapter
+
+        // set the numbersViewAdapter for ListView
+        listview.setAdapter(productAdapter);
+
+        Intent intent = getIntent();
+        // receive the value by getStringExtra() method and
+        // key must be same which is send by first activity
+        String str = intent.getStringExtra("message_key");
+        // display the string into textView
+        items.setText(str);
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
+                Intent intent = new Intent(CatalogueActivity.this, ProductDetailActivity.class);
+                startActivity(intent);
+            }
+        });
 
         addProduct.setOnClickListener(new View.OnClickListener() {
             @Override

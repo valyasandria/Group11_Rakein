@@ -24,23 +24,30 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity {
+    private EditText etName;
+    private EditText etUname;
+    private EditText etEmail;
+    private EditText etPass;
+
     private service retrofit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-
         Button register = findViewById(R.id.button);
-
-
-
+        etName = findViewById(R.id.editTextTextPersonName);
+        etUname = findViewById(R.id.editTextTextPersonName2);
+        etEmail = findViewById(R.id.editTextTextEmailAddress);
+        etPass = findViewById(R.id.editTextTextPassword);
+        
+        retrofit = Instance.getInstance().create(service.class);
 
     register.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            register();
-            /*String name = etName.getText().toString();
+            //register();
+            String name = etName.getText().toString();
             String email = etEmail.getText().toString();
             String username = etUname.getText().toString();
             String password = etPass.getText().toString();
@@ -52,16 +59,16 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Account Registered!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                 startActivity(intent);
-            }*/
+            }
         }
     });
     }
 
-    private void register() {
-        EditText etName = findViewById(R.id.editTextTextPersonName);
-        EditText etUname = findViewById(R.id.editTextTextPersonName2);
-        EditText etEmail = findViewById(R.id.editTextTextEmailAddress);
-        EditText etPass = findViewById(R.id.editTextTextPassword);
+    /*private void register() {
+        etName = findViewById(R.id.editTextTextPersonName);
+        etUname = findViewById(R.id.editTextTextPersonName2);
+        etEmail = findViewById(R.id.editTextTextEmailAddress);
+        etPass = findViewById(R.id.editTextTextPassword);
 
         String name = etName.getText().toString();
         String username = etUname.getText().toString();
@@ -71,6 +78,7 @@ public class RegisterActivity extends AppCompatActivity {
         User user = new User(name, username, email, password);
 
         Call<DefaultResponse> call = retrofit.register(user);
+
         call.enqueue(new Callback<DefaultResponse>() {
             @Override
             public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
@@ -98,6 +106,6 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(RegisterActivity.this, t.toString(),Toast.LENGTH_SHORT).show();
             }
         });
-    }
+    }*/
 
 }

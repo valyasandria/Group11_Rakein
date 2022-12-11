@@ -46,7 +46,7 @@
     <!-- Please type your information -->
     <TextView
         android:id="@+id/please_type"
-        android:layout_width="166dp"
+        android:layout_width="wrap_content"
         android:layout_height="37dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -71,7 +71,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="44dp"
         android:ems="10"
-        android:hint="@string/email"
+        android:hint="@string/username"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"

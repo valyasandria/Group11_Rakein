@@ -48,6 +48,14 @@ public class Store {
         this.store_address = store_address;
     }
 
+    public Store(String store_name, String store_number, String store_desc, String store_type, String store_address) {
+        this.store_name = store_name;
+        this.store_number = store_number;
+        this.store_desc = store_desc;
+        this.store_type = store_type;
+        this.store_address = store_address;
+    }
+
 
     public int getStore_id() {
         return store_id;
