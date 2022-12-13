@@ -32,17 +32,19 @@ public class StoreActivity extends AppCompatActivity {
 
         // set the numbersViewAdapter for ListView
         listView.setAdapter(numbersArrayAdapter);
+        Intent intent = getIntent();
+        // receive the value by getStringExtra() method and
+        // key must be same which is send by first activity
+        String nama = intent.getStringExtra("store");
+        String jenis = intent.getStringExtra("category");
+        // display the string into textView
+        arrayList.add(new MyData(nama, jenis));
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
                 if (position == 0) { //first store
                     Intent intent = new Intent(view.getContext(), CatalogueActivity.class);
-                    startActivity(intent);
-                }
-
-                if (position == 1) {
-                    Intent intent = new Intent(view.getContext(), StoreActivity.class);
                     startActivity(intent);
                 }
             }

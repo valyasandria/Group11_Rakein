@@ -87,6 +87,8 @@ public class RegStoreActivity extends AppCompatActivity {
                 else{
                     Toast.makeText(getApplicationContext(), "Store Registered!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(RegStoreActivity.this, StoreActivity.class);
+                    intent.putExtra("store", store_name);
+                    intent.putExtra("category", store_type);
                     startActivity(intent);
                 }
             }

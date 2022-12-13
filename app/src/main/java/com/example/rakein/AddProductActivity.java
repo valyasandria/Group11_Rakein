@@ -38,6 +38,9 @@ public class AddProductActivity extends AppCompatActivity {
                 else{
                     Toast.makeText(getApplicationContext(), "New product added!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(AddProductActivity.this, CatalogueActivity.class);
+                    intent.putExtra("nama_produk", nama);
+                    intent.putExtra("stok", stok);
+                    intent.putExtra("harga", harga);
                     startActivity(intent);
                 }
             }

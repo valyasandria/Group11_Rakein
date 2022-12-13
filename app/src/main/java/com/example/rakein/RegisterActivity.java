@@ -64,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
     });
     }
 
-    /*private void register() {
+    private void register() {
         etName = findViewById(R.id.editTextTextPersonName);
         etUname = findViewById(R.id.editTextTextPersonName2);
         etEmail = findViewById(R.id.editTextTextEmailAddress);
@@ -79,7 +79,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         Call<DefaultResponse> call = retrofit.register(user);
 
-        call.enqueue(new Callback<DefaultResponse>() {
+        /*call.enqueue(new Callback<DefaultResponse>() {
             @Override
             public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
                 DefaultResponse defaultResponse;
@@ -105,7 +105,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onFailure(Call<DefaultResponse> call, Throwable t) {
                 Toast.makeText(RegisterActivity.this, t.toString(),Toast.LENGTH_SHORT).show();
             }
-        });
-    }*/
+        });*/
+    }
 
 }

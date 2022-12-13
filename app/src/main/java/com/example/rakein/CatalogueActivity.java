@@ -46,14 +46,28 @@ public class CatalogueActivity extends AppCompatActivity {
         // receive the value by getStringExtra() method and
         // key must be same which is send by first activity
         String str = intent.getStringExtra("message_key");
+        String nama = intent.getStringExtra("nama_produk");
+        String stok = intent.getStringExtra("stok");
+        String harga = intent.getStringExtra("harga");
         // display the string into textView
         items.setText(str);
+        arrayList.add(new MyData(nama, stok, "Rp"+harga));
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
-                Intent intent = new Intent(CatalogueActivity.this, ProductDetailActivity.class);
-                startActivity(intent);
+                if (position == 0) { //first product
+                    Intent intent = new Intent(view.getContext(), ProductDetailActivity.class);
+                    startActivity(intent);
+                }
+                if (position == 1) {
+                    Intent intent = new Intent(view.getContext(), ProductDetail2Activity.class);
+                    startActivity(intent);
+                }
+                if (position == 2) {
+                    Intent intent = new Intent(view.getContext(), ProductDetail3Activity.class);
+                    startActivity(intent);
+                }
             }
         });
 
